@@ -34,21 +34,20 @@ LLM_MODEL = "gpt-4.1-mini"
 
 # Set Up
 
-> Prerequisites : 
+Prerequisites : 
     - Python installed
     - OPENAI API key
 
-> Steps :
+Steps :
     - Create a virtual environment : python -m venv .venv
     - Activate virtual environment : .venv\Scripts\activate
     - Install dependencies : pip install -r requirements.txt
-    - Configure OpenAI API key : Update the OpenAI key in the given .env file in the project root : OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
-    
+    - Configure OpenAI API key : Update the OpenAI key in the given .env file in the project root : OPENAI_API_KEY=xxxxxxxxxxxxxxxx
     - Create vectore store : At the first run or only if you do any changes to knowledge base please run : python app/ingest.py
     - Run the RAG application : python app/main.py 
     - Exit the RAG application : exit
 
-> Example test questions :
+Example test questions :
     - How many days of annual leave do employees receive?
     - What are the standard working hours?
     - How much notice is required before resignation?
