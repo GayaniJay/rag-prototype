@@ -17,41 +17,42 @@ A simple Retrieval-Augmented Generation (RAG) application built for learning and
 
 # File Description
 
-app/config.py : Contains model, RAG, and path configurations
-app/ingest.py : Loads documents, splits them into chunks, creates embeddings, and builds the FAISS vector store
-app/retrieve.py : Loads the FAISS vector store and retrieves relevant document chunks
-app/generate.py : Creates the prompt and generates an answer using the OpenAI LLM
-app/main.py : Runs the interactive command-line RAG application
-data/documents/company_policy.txt : Sample knowledge-base document
-data/vector_store/ : Contains the generated FAISS vector store
-.env : Stores the OpenAI API key
-requirements.txt : Lists Python dependencies
+- app/config.py : Contains model, RAG, and path configurations
+- app/ingest.py : Loads documents, splits them into chunks, creates embeddings, and builds the FAISS vector store
+- app/retrieve.py : Loads the FAISS vector store and retrieves relevant document chunks
+- app/generate.py : Creates the prompt and generates an answer using the OpenAI LLM
+- app/main.py : Runs the interactive command-line RAG application
+- data/documents/company_policy.txt : Sample knowledge-base document
+- data/vector_store/ : Contains the generated FAISS vector store
+- .env : Stores the OpenAI API key
+- requirements.txt : Lists Python dependencies
 
 # Models
 
-EMBEDDING_MODEL = "text-embedding-3-small"
-LLM_MODEL = "gpt-4.1-mini"
+- EMBEDDING_MODEL = "text-embedding-3-small"
+- LLM_MODEL = "gpt-4.1-mini"
 
 # Set Up
 
-> Prerequisites : 
+- Prerequisites : 
     - Python installed
     - OPENAI API key
 
-> Steps :
+- Steps :
     - Create a virtual environment : python -m venv .venv
     - Activate virtual environment : .venv\Scripts\activate
     - Install dependencies : pip install -r requirements.txt
-    - Configure OpenAI API key : Update the OpenAI key in the given .env file in the project root : OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
-    
+    - Configure OpenAI API key : Update the OpenAI key in the given .env file in the project root : OPENAI_API_KEY=xxxxxxxxxxxxxxxx
     - Create vectore store : At the first run or only if you do any changes to knowledge base please run : python app/ingest.py
     - Run the RAG application : python app/main.py 
     - Exit the RAG application : exit
 
-> Example test questions :
+- Example test questions :
     - How many days of annual leave do employees receive?
     - What are the standard working hours?
     - How much notice is required before resignation?
     - What are the requirements for remote work?
     - How often are employee performance reviews conducted?
     - What security practices are mandatory?
+
+    
